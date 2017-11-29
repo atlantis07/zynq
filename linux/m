@@ -1,0 +1,5 @@
+#!/bin/sh
+set -x
+make -j24
+make uImage LOADADDR=0X00008000 -j100
+cp arch/arm/boot/uImage /mnt/hgfs/share/
